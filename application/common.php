@@ -10,3 +10,14 @@
 // +----------------------------------------------------------------------
 
 // 应用公共文件
+
+function error($error = null,$code = null){
+    if($error){
+        \app\common\lib\Message::SetError($error);
+        if($code){
+            error_code($code);
+        }
+    } else {
+        return \app\common\lib\Message::GetError();
+    }
+}
