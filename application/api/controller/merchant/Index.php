@@ -1,5 +1,5 @@
 <?php
-namespace app\index\controller;
+namespace app\api\controller\merchant;
 
 class Index
 {
