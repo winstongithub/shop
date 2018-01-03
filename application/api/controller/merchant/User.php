@@ -11,4 +11,12 @@ class User extends APIControllerBase{
         $result = MerchantService::Apply($applyData);
         return json_encode($result);
     }
+
+    public function login(){
+        $phone = input('phone');
+        $password = input('password');
+        $loginInfo = MerchantService::Login($phone, $password);
+        
+        return $this->getResult($loginInfo);
+    }
 }
